@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background: url(/Portf-lio/assets/src/bg.png)no-repeat;
+    background-size: cover;
+    background-size: 400% 400%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    border-bottom: 3px solid #fff;
+    border-radius: 20px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-list
+
+/* header ul */
+    {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    z-index: 9999;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.acioned {
+    background: #ffffff;
+    color: #000;
+    opacity: 0.7;
+}
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* MAIN WALLPAPER */
+
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.menu-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.menu-container h2 {
+    z-index: 1;
+    position: relative;
+    color: #ffffff;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 80px;
+}
+
+.menu-container h2 span {
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* CARDS */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform-style: preserve-3d;
+    border-top: 3px solid #ffffff;
+    border-radius: 20px;
+    margin: 3rem 0;
+}
+
+.container .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 450px;
+    margin: 40px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 40%;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.container .box::before {
+    content: "Philipe";
+    position: absolute;
+    top: 20px;
+    left: 760px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box::after {
+    position: absolute;
+    content: "Morais";
+    bottom: 15px;
+    left: 700px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+    opacity: 0.04;
+}
+
+.container .box .name {
+    position: absolute;
+    top: 0;
+    right: 253px;
+    text-align: right;
+    color: #ffffff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .name {
+    top: 40px;
+    opacity: 1;
+}
+
+.container .box .link {
+    position: absolute;
+    bottom: 100px;
+    left: 920px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #ffffff;
+    padding: 25px 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .link {
+    bottom: -30px;
+    opacity: 1;
+}
+
+
+.container .box .logo-card {
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    bottom: -80px;
+    left: 920px;
+    justify-content: center;
+    align-items: right;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 0px);
+}
+
+.container .box:hover .logo-card {
+    transform: translate3d(-50%, -50%, 100px);
+}
+
+.logo-card-linkedin {
+    position: absolute;
+    height: 270px;
+    width: 300px;
+    display: flex;
+    bottom: -50px;
+    left: 920px;
+    justify-content: center;
+    align-items: right;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 0px);
+}
+
+.container .box:nth-child(1) .link {
+    background: #FF8A80;
+    text-align: center;
+}
+
+.container .box:nth-child(2) .link {
+    background: #80D8FF;
+    text-align: center;
+}
+
+.container .box:nth-child(3) .link {
+    background: #FFF200;
+    text-align: center;
+}
+
+/* FIM CARDS */
+
+.footer {
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 70px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ffffff, #1b0954, #3a0ca3, #1c0c4c, #ffffff);
+}
+
+.gmail-logo {
+    height: 20px;
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+
+.nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 30vw;
+        height: 87vh;
+        background: transparent;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        cursor: pointer;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .menu-container {
+        position: relative;
+        width: 90vw;
+        height: 92vh;
+    }
+
+    .menu-container h2 {
+        font-size: 60px;
+        letter-spacing: 19px;
+        line-height: 35px;
+    }
+
+    .menu-container h2 span {
+        font-size: 26px;
+    }
+
+    .container {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container .box {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .text {
+        text-align: center;
+        width: 90%;
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .container .box::before{
+        top: 110px;
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 300px;
+        display: none;
+    }
+
+    .container .box::after{
+        top: 430px;
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 300px;
+        display: none;
+    }
+
+    .container .box .name {
+        margin-right: 90px;
+        margin-top: 480px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .container .box .name-experiencias {
+        margin-right: 100px;
+        margin-bottom: 100px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .container .box .logo-card {
+        top: 340px;
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 400px;
+    }
+
+    .container .box .link {
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: -40px;
+        left: 400px;
+    }
+    
+    .container .box:hover .link{
+        width: 50%; 
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .container .box .link {
+        text-align: center;
+    }
+
+    .logo-card-linkedin{
+        top: 300px;
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 400px;
+    }
+}
+
+.text, .logo-card, .logo-card-linkedin, .footer, .menu-container{
+    visibility: hidden;
+}
