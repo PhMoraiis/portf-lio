@@ -13,7 +13,11 @@ html {
 
 body {
     font-family: 'Jost', sans-serif;
+<<<<<<< HEAD
     background: radial-gradient(circle, rgba(1,0,22,1) 0%, rgba(25,11,81,1) 0%, rgba(4,1,28,1) 81%);
+=======
+    background: url(assets/src/bg.png)no-repeat;
+>>>>>>> 33514a1bfccc11a62c0d05e86aa82b661f546b30
     background-size: cover;
     background-size: 400% 400%;
     height: 100%;
