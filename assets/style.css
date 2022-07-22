@@ -491,13 +491,13 @@ header ul li a.acioned {
 }
 
 ::-webkit-scrollbar {
-    width: 20px
+    width: 10px
 }
 
 ::-webkit-scrollbar-track {
-    background: #ddd;
+    background: #101039;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3a0ca3;
+    background: #fff;
 }
