@@ -13,11 +13,7 @@ html {
 
 body {
     font-family: 'Jost', sans-serif;
-<<<<<<< HEAD
     background: radial-gradient(circle, rgba(1,0,22,1) 0%, rgba(25,11,81,1) 0%, rgba(4,1,28,1) 81%);
-=======
-    background: url(assets/src/bg.png)no-repeat;
->>>>>>> 33514a1bfccc11a62c0d05e86aa82b661f546b30
     background-size: cover;
     background-size: 400% 400%;
     height: 100%;
@@ -399,6 +395,7 @@ header ul li a.acioned {
 
     .container .box {
         flex-direction: column;
+        margin-top: 70px;
     }
 
     .card {
@@ -409,7 +406,7 @@ header ul li a.acioned {
     .text {
         text-align: center;
         width: 90%;
-        margin-top: 50px;
+        margin-top: 200px;
         flex-direction: column-reverse;
     }
 
@@ -440,6 +437,7 @@ header ul li a.acioned {
         margin-top: 480px;
         width: 90%;
         flex-direction: column;
+        display: none;
     }
 
     .container .box .name-experiencias {
@@ -447,6 +445,7 @@ header ul li a.acioned {
         margin-bottom: 100px;
         width: 90%;
         flex-direction: column;
+        display: none;
     }
 
     .container .box .logo-card {
@@ -457,6 +456,7 @@ header ul li a.acioned {
         justify-content: center;
         align-items: center;
         left: 400px;
+        display: none;
     }
 
     .container .box .link {
@@ -464,16 +464,19 @@ header ul li a.acioned {
         margin-top: 50px;
         margin-bottom: -40px;
         left: 400px;
+        display: none;
     }
     
     .container .box:hover .link{
         width: 50%; 
         flex-direction: column;
         margin-top: 100px;
+        display: none;
     }
 
     .container .box .link {
         text-align: center;
+        display: none;
     }
 
     .logo-card-linkedin{
@@ -484,6 +487,7 @@ header ul li a.acioned {
         justify-content: center;
         align-items: center;
         left: 400px;
+        display: none;
     }
 }
 
@@ -503,4 +507,8 @@ header ul li a.acioned {
 
 ::-webkit-scrollbar-thumb {
     background: #fff;
+}
+
+.link-texto {
+    color: #fff;
 }
