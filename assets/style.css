@@ -263,6 +263,7 @@ header ul li a.acioned {
     z-index: 10;
 }
 
+
 .container .box:hover .link {
     bottom: -30px;
     opacity: 1;
@@ -318,6 +319,7 @@ header ul li a.acioned {
 }
 
 .container .box:nth-child(3) .link {
+    color: #000;
     background: #FFF200;
     text-align: center;
 }
@@ -333,7 +335,8 @@ header ul li a.acioned {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #ffffff, #1b0954, #3a0ca3, #1c0c4c, #ffffff);
+    background: radial-gradient(circle, rgba(12,38,172,1) 0%, rgba(8,0,2,1) 100%);
+    text-align: center;
 }
 
 .gmail-logo {
@@ -481,6 +484,20 @@ header ul li a.acioned {
     }
 }
 
+/* CSS para Scroll Reveal */
+
 .text, .logo-card, .logo-card-linkedin, .footer, .menu-container{
     visibility: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 20px
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a0ca3;
 }
