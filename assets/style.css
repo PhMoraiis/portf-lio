@@ -13,13 +13,12 @@ html {
 
 body {
     font-family: 'Jost', sans-serif;
-    background: url(/Portf-lio/assets/src/bg.png)no-repeat;
+    background: radial-gradient(circle, rgba(1,0,22,1) 0%, rgba(25,11,81,1) 0%, rgba(4,1,28,1) 81%);
     background-size: cover;
     background-size: 400% 400%;
     height: 100%;
     justify-content: center;
     align-items: center;
-
 }
 
 nav {
@@ -335,7 +334,7 @@ header ul li a.acioned {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(12,38,172,1) 0%, rgba(8,0,2,1) 100%);
+    background: linear-gradient(90deg, rgba(1,0,22,1) 0%, rgba(4,1,28,1) 100%, rgba(25,11,81,1) 100%);
     text-align: center;
 }
 
@@ -495,7 +494,7 @@ header ul li a.acioned {
 }
 
 ::-webkit-scrollbar-track {
-    background: #101039;
+    background: linear-gradient(90deg, rgba(1,0,22,1) 0%, rgba(4,1,28,1) 81%, rgba(25,11,81,1) 100%);
 }
 
 ::-webkit-scrollbar-thumb {
