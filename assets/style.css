@@ -520,8 +520,6 @@ header ul li a.acioned {
     color: #fff;
 }
 
-/* TESTE DO SWITCH THEME */
-
 .checkbox {
     display: inline-block;
     border-radius: 30px;
@@ -539,7 +537,7 @@ header ul li a.acioned {
     align-items: center;
     width: var(--width);
     height: 30px;
-    outline: 5px solid #eaeef0;
+    outline: 5px solid var(--text-color);
     background-image: linear-gradient(to left, #004e92, #000428);
     cursor: pointer;
     border-radius: inherit;
@@ -550,7 +548,7 @@ header ul li a.acioned {
     content: "";
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #eaeef0;
     opacity: 0;
     transition: opacity .5s;
 }
@@ -568,7 +566,7 @@ header ul li a.acioned {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background-color: #eaeef0;
+    background-color: #c8c8c8;
     transition: all .25s
     cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -581,6 +579,7 @@ header ul li a.acioned {
     --distance: calc(var(--width) - var(--size) - var(--gap));
     content: "☀️";
     transform: translateX(var(--distance));
+    background-color: #48b4e0;
 }
 
 .rotate-words {
